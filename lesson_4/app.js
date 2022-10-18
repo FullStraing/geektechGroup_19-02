@@ -64,4 +64,4 @@ function reverseWord(word){
     }
     return newWord
 }
-console.log(reverseWord(/*"hello"*/));
+log privet
