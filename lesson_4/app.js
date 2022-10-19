@@ -1,3 +1,48 @@
+// ДЗ 5
+function User(userName, name, pass){
+    this.Name = name;
+    this.UserName = userName;
+    this.Pass = pass
+}
+var customer = new User('oops', 'lama', 'pijama')
+console.table(customer)
+// var customer2 = new User('Svetlana', 'Sveta', 'sveta123')
+// console.table(customer2)
+
+// 2задание
+
+var array = ["evgenii","vadim","EKATERINA","SoFya","mARIA","svetlana","alexey"] 
+console.log(
+    array.map(function(names){
+        full = names.toLowerCase();
+        firstChar = names[0].toUpperCase();
+        return firstChar+full.slice(1)
+    })
+);
+
+// 3 задание
+
+var array = ["00101202215478",
+"qwerty","125042000000258","79451789841256",
+"21010199578143","01234567891234","249489","21702200214789"];
+console.log(
+    array.filter(function(INN){
+        return INN.length === 14 && (INN[0] === '0' || INN[0] === '1' || INN[0] === '2')
+    })
+);
+
+// 4 задание
+
+var array = ["Evgenii","Vadim","Ekaterina","Sofya","Maria","Svetlana","Alexey"];
+console.log(
+    array.reduce(function(names, longestName){
+        names = longestName.length > names.length ? longestName : names;
+        return names
+    })
+);
+
+// ДЗ 4 переделаю
+/*
 function minNumber(array){
     var i = array.length;
     min = array[i-1];
@@ -64,4 +109,4 @@ function reverseWord(word){
     }
     return newWord
 }
-log privet
+*/
